@@ -30,32 +30,6 @@ Modern, elegant portfolio website showcasing a backend engineer's skills, experi
 - Lighthouse ready
 
 ## Getting Started
-
-### Prerequisites
-- Node.js 18+
-- npm or yarn
-
-### Installation
-
-```bash
-npm install
-```
-
-### Development
-
-```bash
-npm run dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) in your browser.
-
-### Build for Production
-
-```bash
-npm run build
-npm start
-```
-
 ## Customization
 
 ### Update Personal Information

@@ -36,11 +36,6 @@ export default function Contact() {
       url: "mailto:jorge_hernandezvqz@hotmail.com",
       icon: "📧",
     },
-    {
-      name: "WhatsApp",
-      url: "https://wa.me/528442741275",
-      icon: "💬",
-    },
   ];
 
   return (
