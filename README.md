@@ -51,31 +51,6 @@ Modern, elegant portfolio website showcasing a backend engineer's skills, experi
 - Modify `tailwind.config.js` for custom colors
 - Update gradient colors in component className
 
-## Deployment
-
-### Vercel (Recommended)
-
-```bash
-npm i -g vercel
-vercel
-```
-
-### Netlify
-
-```bash
-npm run build
-# Deploy the 'out' directory to Netlify
-```
-
-### Other Platforms
-
-Build the project:
-```bash
-npm run build
-```
-
-Deploy the `.next` folder to your hosting provider.
-
 ## SEO & Meta Tags
 
 The site includes:
