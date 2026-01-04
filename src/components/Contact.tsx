@@ -11,75 +11,59 @@ export default function Contact() {
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-  };
+    "use client";
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log("Form submitted:", formData);
-    setFormData({ name: "", email: "", message: "" });
-  };
+    export default function Contact() {
+      const links = [
+        {
+          name: "GitHub",
+          url: "https://github.com/Geeorgge",
+          icon: "🐙",
+        },
+        {
+          name: "LinkedIn",
+          url: "https://linkedin.com/in/georgehdz",
+          icon: "💼",
+        },
+        {
+          name: "Email",
+          url: "mailto:jorge_hernandezvqz@hotmail.com",
+          icon: "📧",
+        },
+      ];
 
-  const links = [
-    {
-      name: "GitHub",
-      url: "https://github.com/Geeorgge",
-      icon: "🐙",
-    },
-    {
-      name: "LinkedIn",
-      url: "https://linkedin.com/in/georgehdz",
-      icon: "💼",
-    },
-    {
-      name: "Email",
-      url: "mailto:jorge_hernandezvqz@hotmail.com",
-      icon: "📧",
-    },
-  ];
-
-  return (
-    <section id="contact" className="py-20 px-4">
-      <div className="max-w-4xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-bold mb-4 text-center gradient-text">
-          Let's Connect
-        </h2>
-        <p className="text-center text-gray-400 mb-12">
-          Have a question or want to collaborate? Let's talk!
-        </p>
-
-        <div className="max-w-2xl mx-auto">
-          <div className="space-y-6">
-            <h3 className="text-2xl font-bold text-indigo-300">Get in Touch</h3>
-            <p className="text-gray-400">
-              Feel free to reach out through any of these channels. I'm always interested in
-              hearing about new projects and opportunities. Based in Saltillo, working with remote teams.
+      return (
+        <section id="contact" className="py-20 px-4">
+          <div className="max-w-2xl mx-auto text-center">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 gradient-text">Let's Connect</h2>
+            <p className="text-gray-400 mb-8">
+              Have a question or want to collaborate? I'm open to discussing new projects and
+              opportunities. Based in Saltillo and available for remote work.
             </p>
 
-            <div className="space-y-4">
+            <a
+              href="mailto:jorge_hernandezvqz@hotmail.com"
+              className="inline-block btn-primary text-white font-semibold px-6 py-3 rounded-lg hover:bg-indigo-700 transition mb-6"
+            >
+              Email me
+            </a>
+
+            <div className="flex justify-center gap-4 mt-4">
               {links.map((link) => (
                 <a
                   key={link.name}
                   href={link.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-4 p-4 glass-effect rounded-lg hover:border-indigo-400 transition group"
+                  className="flex items-center gap-2 p-3 glass-effect rounded-lg hover:border-indigo-400 transition"
                 >
-                  <span className="text-3xl">{link.icon}</span>
-                  <div>
-                    <p className="font-semibold group-hover:text-indigo-400 transition">
-                      {link.name}
-                    </p>
-                    {link.name === "Email" && (
-                      <p className="text-xs text-gray-500">jorge_hernandezvqz@hotmail.com</p>
-                    )}
-                  </div>
+                  <span className="text-2xl">{link.icon}</span>
+                  <span className="font-medium text-gray-200">{link.name}</span>
                 </a>
               ))}
             </div>
           </div>
-        </div>
-      </div>
-    </section>
-  );
-}
+        </section>
+      );
+    }
+                  <div>
